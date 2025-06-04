@@ -1,3 +1,6 @@
+# This is a fork
+some bad person put % in their wifi password and configparser compleind
+---
 # NetworkManager to Nix
 
 This is a dumb script that converts every .nmconnection file in the current directory to the nix code that is expected by `networking.networkmanager.ensureProfiles.profiles` which was introduced in [NixOS/nixpkgs/#254647](https://github.com/NixOS/nixpkgs/pull/254647)
@@ -9,5 +12,5 @@ The code gets outputted as one line of nix, so you probably want to run it throu
 
 If you just want to run the script do:
 ```bash
-sudo su -c "cd /etc/NetworkManager/system-connections && nix --extra-experimental-features 'nix-command flakes' run github:Janik-Haag/nm2nix | nix --extra-experimental-features 'nix-command flakes' run nixpkgs#nixfmt-rfc-style"
+sudo su -c "cd /etc/NetworkManager/system-connections && nix --extra-experimental-features 'nix-command flakes' run github:Mio-coder/nm2nix | nix --extra-experimental-features 'nix-command flakes' run nixpkgs#nixfmt-rfc-style"
 ```
